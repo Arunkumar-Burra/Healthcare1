@@ -9,13 +9,14 @@ import re
 import uuid
 # Create your views here.
 def Home_page(request):
-   if 'key' in request.session:
-       aff = session.objects.all()
-       print(aff)
-       if 'key' in aff:pass
-       elif 'key' in session.username:return render(request,'Home.html')
-       else:
-           return HttpResponse("need to login")
+    if request.session.get['key']:
+        a = request.session.get("key")
+        print("hello world")
+        aff = session.objects.
+        if a in aff:pass
+        elif a in session.username:return render(request,'Home.html')
+        else:
+            return HttpResponse("need to login")
 
 
 
